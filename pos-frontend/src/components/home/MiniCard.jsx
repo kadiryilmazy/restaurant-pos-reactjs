@@ -8,7 +8,7 @@ function MiniCard({ title, icon, number, footerNum }) {
                 <button className={`${title === "Total Earnings" ? "bg-green-500" : "bg-yellow-500"} p-3 rounded-lg text-white text-2xl`}>{icon}</button>
             </div>
             <div>
-                <h1 className="mt-5 text-4xl font-bold text-white">{number}</h1>
+                <h1 className="mt-5 text-4xl font-bold text-white">{title === "Total Earnings" ? `${number}` : number}</h1>
                 <h1 className="mt-2 text-lg text-white">
                     <span className="text-green-500 ">%{footerNum}</span> than yesterday
                 </h1>

@@ -1,11 +1,12 @@
 import React from "react";
 import Logo from "../../logo.png";
 import { FaBell, FaSearch, FaUserCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <header className="flex justify-between items-center px-8 py-4  bg-[#000000]">
-            {/*LOGO*/}
-            <div className="flex items-center gap-2">
+            <div onClick={() => navigate("/")} className="flex items-center gap-2 select-none hover:scale-125">
                 <img src={Logo} className="w-8 h-8" alt="restro logo" />
                 <h1 className="text-lg font-semibold text-[#f5f5f5]"> Restro</h1>
             </div>
